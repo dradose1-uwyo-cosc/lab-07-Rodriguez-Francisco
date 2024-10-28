@@ -1,8 +1,10 @@
-# Your Name Here
+import math
+# Francisco Rodriguez
+
 # UWYO COSC 1010
 # Submission Date
-# Lab XX
-# Lab Section: 
+# Lab 7
+# Lab Section: Monday 310PM
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -17,7 +19,26 @@
     # If a user did not enter a number output a statement saying so
 # You will continue to prompt the user until a proper integer value is entered
 
+
+
+
+    
+
+
+
+
+
+
 factorial = 1
+while True:
+    user_str=input("Hi! enter a positive number AKA upper bound: ")
+    
+    if user_str.isnumeric()and int(user_str)>0:
+        factorial= math.factorial(int(user_str))
+        break
+    else:
+        print("ERROR")
+
 
 print(f"The result of the factorial based on the given bound is {factorial}")
 
@@ -36,8 +57,19 @@ print("*"*75)
     # I recommend checking out: https://www.w3schools.com/python/ref_string_replace.asp to figure out how one may remove a character from a string
 # All this together means you will have an intensive while loop that includes multiple if statements, likely with some nesting 
 # The sum should start at 0 
-
 num_sum = 0 
+while True:
+    sum_num=input("Hi! enter num: ")
+    
+    if sum_num.isnumeric():
+        num_sum+=int(sum_num)
+        
+    elif sum_num.upper() == "EXIT":
+    
+        break
+
+
+
 
 print(f"Your final sum is {num_sum}")
 
@@ -59,4 +91,30 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
+while True:
+    calculator=input("Hi! enter operand operator operand: ")
+   
+    if "+"in calculator:
+        calc_num=calculator.split("+")
+        print(int(calc_num[0])+int(calc_num[1]))
+    elif "-"in calculator:
+        calc_num=calculator.split("-")
+        print(int(calc_num[0])-int(calc_num[1]))
+    elif "/"in calculator:
+        calc_num=calculator.split("/")
+        print(int(calc_num[0])/int(calc_num[1]))
+    elif "*"in calculator:
+        calc_num=calculator.split("*")
+        print(int(calc_num[0])*int(calc_num[1]))
+    elif "%"in calculator:
+        calc_num=calculator.split("%")
+        print(int(calc_num[0])%int(calc_num[1]))      
+    elif calculator.upper() == "EXIT":
+        
+                break
+    
+
+    
+     
+    
         
